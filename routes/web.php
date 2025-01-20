@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PdfController;
 use App\Http\Controllers\RentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AdminMiddleware;
@@ -88,3 +89,6 @@ Route::post('/seasonal-discounts/store', [HomeController::class, 'store_seasonal
 Route::delete('/discounts/{id}', [HomeController::class, 'destroyDiscount'])->name('discounts.destroy');
 Route::get('/copy-products-to-productst', [HomeController::class, 'copyProductsToProductst'])->name('copy-products-to-productst');
 require __DIR__ . '/auth.php';
+
+
+Route::get('/pdf/income-summary', [PdfController::class, 'incomeSummary'])->name('pdf.income-summary');
