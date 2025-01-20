@@ -1,4 +1,4 @@
-@include('admin.header')
+<?php echo $__env->make('admin.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <div class="page-wrapper">
     <div class="content">
         <div class="row">
@@ -7,7 +7,7 @@
             <div class="col-lg-3 col-sm-6 col-12 d-flex">
                 <div class="dash-count">
                     <div class="dash-counts">
-                        <h4>{{ $usersCount }}</h4>
+                        <h4><?php echo e($usersCount); ?></h4>
                         <h5>Customers</h5>
 
                     </div>
@@ -19,7 +19,7 @@
             <div class="col-lg-3 col-sm-6 col-12 d-flex">
                 <div class="dash-count das1">
                     <div class="dash-counts">
-                        <h4>{{ $suppliersCount }}</h4>
+                        <h4><?php echo e($suppliersCount); ?></h4>
                         <h5>Suppliers</h5>
                     </div>
                     <div class="dash-imgs">
@@ -30,7 +30,7 @@
             <div class="col-lg-3 col-sm-6 col-12 d-flex">
                 <div class="dash-count das2">
                     <div class="dash-counts">
-                        <h4>{{ $productsCount }}</h4>
+                        <h4><?php echo e($productsCount); ?></h4>
                         <h5>Products</h5>
                     </div>
                     <div class="dash-imgs">
@@ -59,22 +59,23 @@
 </div>
 
 
-<script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
+<script src="<?php echo e(asset('assets/js/jquery-3.6.0.min.js')); ?>"></script>
 
-<script src="{{ asset('assets/js/feather.min.js') }}"></script>
+<script src="<?php echo e(asset('assets/js/feather.min.js')); ?>"></script>
 
-<script src="{{ asset('assets/js/jquery.slimscroll.min.js') }}"></script>
+<script src="<?php echo e(asset('assets/js/jquery.slimscroll.min.js')); ?>"></script>
 
-<script src="{{ asset('assets/js/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('assets/js/dataTables.bootstrap4.min.js') }}"></script>
+<script src="<?php echo e(asset('assets/js/jquery.dataTables.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/js/dataTables.bootstrap4.min.js')); ?>"></script>
 
-<script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+<script src="<?php echo e(asset('assets/js/bootstrap.bundle.min.js')); ?>"></script>
 
-<script src="{{ asset('assets/plugins/apexchart/apexcharts.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/apexchart/chart-data.js') }}"></script>
+<script src="<?php echo e(asset('assets/plugins/apexchart/apexcharts.min.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/plugins/apexchart/chart-data.js')); ?>"></script>
 
-<script src="{{ asset('assets/js/script.js') }}"></script>
+<script src="<?php echo e(asset('assets/js/script.js')); ?>"></script>
 
 </body>
 
 </html>
+<?php /**PATH G:\Projects\freind projects\Nifty-look\resources\views/admin/dashboard.blade.php ENDPATH**/ ?>
